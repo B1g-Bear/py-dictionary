@@ -2,7 +2,9 @@ from typing import Optional, Any
 
 
 class Node:
-    def __init__(self, key: Any, value: Any, hash_value: int) -> None:
+    def __init__(
+        self, key: Any, value: Any, hash_value: int
+    ) -> None:
         self.key: Any = key
         self.value: Any = value
         self.hash: int = hash_value
@@ -10,7 +12,11 @@ class Node:
 
 
 class Dictionary:
-    def __init__(self, initial_capacity: int = 8, load_factor: float = 0.75) -> None:
+    def __init__(
+        self,
+        initial_capacity: int = 8,
+        load_factor: float = 0.75,
+    ) -> None:
         self.capacity: int = initial_capacity
         self.load_factor: float = load_factor
         self.length: int = 0
